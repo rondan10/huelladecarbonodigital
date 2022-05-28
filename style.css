@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", cursive;
+  scroll-behavior: smooth;
+}
+.digital_contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
+}
+.digital_cabecera {
+  font-size: 30px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+digital_descripcion {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.digital {
+  background: linear-gradient(
+      to right,
+      rgba(21, 208, 61, 0.4),
+      rgba(10, 61, 21, 0.4)
+    ),
+    url(./world-population-day-with-planet-in-corner.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding: 280px 0;
+}
+table {
+  margin-top: 3rem;
+  border-spacing: 1rem;
+  border-color: #000;
+  border-width: 3px;
+}
+input.dimension:hover {
+  background-color: aqua;
+}
+input.dimension {
+  display: flexbox;
+  align-items: center;
+  font-size: 20px;
+}

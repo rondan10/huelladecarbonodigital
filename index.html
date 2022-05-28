@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huella de Carbono Digital</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="digital">
+      <div class="digital_contenedor">
+        <h1 class="digital_cabecera">Calcula tu huella de Carbono Digital</h1>
+        <b class="digital_descripcion"
+          >La huella de carbono digital es esa contaminación que no vemos y que
+          procede de las emisiones de gases de efecto invernadero (GEI) que
+          produce el uso de las Tecnologías de Información y las Comunicaciones
+          (TIC), y en especial todo lo relacionado con internet. Cuando hablamos
+          de la huella de carbono digital, gran parte de lo que genera esa
+          contaminación se debe a la construcción y mantenimiento de los centros
+          de datos que procesan las transacciones y actividades digitales.
+        </b>
+        <form action="">
+          <table border="2" align="center">
+            <tr>
+              <td>
+                Cuantas horas estas en la computadora o laptop en el dia?
+                <input class="c1" type="number" name="a" id="a" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cuantas horas estas en tu dispositivo movil en el dia?
+                <input class="c1" type="number" name="b" id="b" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cuantas horas navegas en redes sociales en el dia?
+                <input class="c1" type="number" name="c" id="c" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cuantos correos envias en el dia?
+                <input class="c1" type="number" name="d" id="d" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cuantas horas en video reproduces en YouTube al dia?
+                <input class="c1" type="number" name="e" id="e" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cuantos Tweets generas al dia?
+                <input class="c1" type="number" name="f" id="f" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cuanta busqueda de internet generas al dia?
+                <input class="c1" type="number" name="g" id="g" />
+              </td>
+            </tr>
+            <td>
+                Cuantos mensajes de texto o whatsapp envias en el dia?
+                <input class="c1" type="number" name="h" id="h" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="button"
+                  class="dimension"
+                  value="Calcular Ahora"
+                  onclick="calcular();"
+                />
+              </td>
+            </tr>
+          </table>
+        </form>
+        <script>
+          function calcular() {
+            var num1 = parseInt(document.getElementById("a").value);
+            var num2 = parseInt(document.getElementById("b").value);
+            var num3 = parseInt(document.getElementById("c").value);
+            var num4 = parseInt(document.getElementById("d").value);
+            var num5 = parseInt(document.getElementById("e").value);
+            var num6 = parseInt(document.getElementById("f").value);
+            var num7 = parseInt(document.getElementById("g").value);
+            var num8 = parseInt(document.getElementById("h").value);
+            
+            var correo = 4;
+            var buqueda = 0.2;
+            var tweet = 0.02;
+            var video = 6;
+            var mensaje=0.2;
+            var celular= 720;
+            var compt=234;
+            var redes=30.4;
+            var v1 = num1 * compt;
+            var v2=num2*celular;
+            var v3=num3*redes;
+            var v4=num4*correo;
+            var v5=num5*video;
+            var v6=num6*tweet;
+            var v7=num7*buqueda;
+            var v8=num8*mensaje;
+
+            var cc = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8;
+            if(cc<2000){
+                alert("Tu Huella de Carbono Digital en el dia es:" + cc + "CO2"+"ES BAJA");
+            }else{
+                alert("Tu Huella de Carbono Digital en el dia es: " + cc +" gr"+" CO2"+" ¡ES MUY ALTA!");
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
